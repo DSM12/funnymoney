@@ -24,23 +24,29 @@ Things that need done:
         Display total expenses for today (numerical amount)
             Calculate total daily expenses
                 Add daily expenses (sum)
-        Display list of transactions for today
-            Date, Category, Amount, Merchant
+        Display list of transactions for today in a modal
+            Date, Amount, Category, Merchant
     
     Weekly Expenses
         Display Weekly Expenses
             Calculate weekly expenses
                 Add up all 7 daily expenses
+        Display list of transactions for the week in a modal
+            Date, Amount, Category, Merchant
     
     Monthly Expenses
         Display Monthly Expenses
             Calculate Monthly Expenses
                 Add up all 4 Weekly Expenses
+        Display list of transactions for the month in a modal
+            Date, Amount, Category, Merchant
     
     Yearly Expenses
         Display Yearly Expenses
             Calculate Yearly Expenses
                 Add up all 12 Monthly Expenses
+        Display list of transactions for the year in a modal
+            Date, Amount, Category, Merchant
 
 
 
