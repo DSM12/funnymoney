@@ -1,0 +1,46 @@
+Things that need done:
+    User authentication
+        Create new account
+            Getting input forms to save the data (name, phone number, email, password, and username to the database) (post route)
+            Make a profile for generic login
+        
+        Logging in
+            Retrieving data from the database to check if an account exists
+                If account exists check if passwords match
+                    If passwords match let users login
+                If account doesn't exists
+                    Error: No account exists. Please create an account.
+    Navigation Bar
+        Create navigation bar on annual, monthly, savings, today, and weekly pages
+            This needs to be a side navigation bar
+    
+    Transactions
+        Store transactions in a database
+            We need to store: Date, Amount, Merchant, and Category
+        Retrieve transactions from the database
+            We need to retrieve: Date, Amount, Merchant, and Category
+
+    Todays Expenses
+        Display total expenses for today (numerical amount)
+            Calculate total daily expenses
+                Add daily expenses (sum)
+        Display list of transactions for today
+            Date, Category, Amount, Merchant
+    
+    Weekly Expenses
+        Display Weekly Expenses
+            Calculate weekly expenses
+                Add up all 7 daily expenses
+    
+    Monthly Expenses
+        Display Monthly Expenses
+            Calculate Monthly Expenses
+                Add up all 4 Weekly Expenses
+    
+    Yearly Expenses
+        Display Yearly Expenses
+            Calculate Yearly Expenses
+                Add up all 12 Monthly Expenses
+
+
+
