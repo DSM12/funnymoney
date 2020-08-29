@@ -3,10 +3,13 @@ var mysql = require('mysql');
 var con = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "password"
+    password: "password",
+    database: "funnymoney"
   });
   
   con.connect(function(err) {
     if (err) throw err;
-    console.log("Connected!");
+    console.log("Database is connected successfully!");
   });
+
+  module.exports = con;
