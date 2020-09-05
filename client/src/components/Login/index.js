@@ -3,19 +3,6 @@ import React from "react";
 function Login({UserName, Password, handleInputChange, handleFormSubmit }) {
     return (
         <form>
-            {/* <div className="form-inline">
-                <label htmlFor="FullName">
-                    <strong>Full Name:</strong>
-                </label>
-                <input
-                    type="text"
-                    className="form-control"
-                    id="FullName"
-                    value={FullName}
-                    onChange={handleInputChange}
-                    required
-                />
-            </div> */}
             <div className="form-inline">
                 <label htmlFor="Username">
                     <strong>Username:</strong>
@@ -29,32 +16,6 @@ function Login({UserName, Password, handleInputChange, handleFormSubmit }) {
                     required
                 />
             </div>
-            {/* <div className="form-inline">
-                <label htmlFor="Email">
-                    <strong>Email:</strong>
-                </label>
-                <input
-                    type="Email"
-                    className="form-control"
-                    id="Email"
-                    value={Email}
-                    onChange={handleInputChange}
-                    required
-                />
-            </div> */}
-            {/* <div className="form-inline">
-                <label htmlFor="Phone">
-                    <strong>Phone:</strong>
-                </label>
-                <input
-                    type="Phone"
-                    className="form-control"
-                    id="Phone"
-                    value={Phone}
-                    onChange={handleInputChange}
-                    required
-                />
-            </div> */}
             <div className="form-inline">
                 <label htmlFor="Password">
                     <strong>Password:</strong>
@@ -68,6 +29,7 @@ function Login({UserName, Password, handleInputChange, handleFormSubmit }) {
                     required
                 />
             </div>
+            <div className="form-inline">
             <button
                 onClick={handleFormSubmit}
                 type="submit"
@@ -75,6 +37,7 @@ function Login({UserName, Password, handleInputChange, handleFormSubmit }) {
                 >
                 Login
               </button>
+              </div>
          </form>
   );
 }
