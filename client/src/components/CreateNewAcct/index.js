@@ -1,6 +1,6 @@
 import React from "react";
 
-function CreateNewAcct({FullName, UserName, Email,Password, handleInputChange, handleFormSubmit }) {
+function CreateNewAcct({FullName, UserName, Email,Phone, Password, handleInputChange, handleFormSubmit }) {
     return (
         <form>
             <div className="form-inline">
