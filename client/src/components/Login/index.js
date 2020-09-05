@@ -1,10 +1,10 @@
 import React from "react";
 
-function Login({ FullName, UserName, Phone, Email, Password }) {
+function Login({UserName, Password, handleInputChange, handleFormSubmit }) {
     return (
         <form>
-            <div className="form-inline">
-                <label htmlfor="FullName">
+            {/* <div className="form-inline">
+                <label htmlFor="FullName">
                     <strong>Full Name:</strong>
                 </label>
                 <input
@@ -12,12 +12,12 @@ function Login({ FullName, UserName, Phone, Email, Password }) {
                     className="form-control"
                     id="FullName"
                     value={FullName}
-                    // onChange={handleInputChange}
+                    onChange={handleInputChange}
                     required
                 />
-            </div>
+            </div> */}
             <div className="form-inline">
-                <label htmlfor="Username">
+                <label htmlFor="Username">
                     <strong>Username:</strong>
                 </label>
                 <input
@@ -25,25 +25,25 @@ function Login({ FullName, UserName, Phone, Email, Password }) {
                     className="form-control"
                     id="Username"
                     value={UserName}
-                    // onChange={handleInputChange}
+                    onChange={handleInputChange}
                     required
                 />
             </div>
-            <div className="form-inline">
-                <label htmlfor="Email">
+            {/* <div className="form-inline">
+                <label htmlFor="Email">
                     <strong>Email:</strong>
                 </label>
-                <inputEmail
-                    type="email"
+                <input
+                    type="Email"
                     className="form-control"
                     id="Email"
                     value={Email}
-                    // onChange={handleInputChange}
+                    onChange={handleInputChange}
                     required
                 />
-            </div>
-            <div className="form-inline">
-                <label htmlfor="Phone">
+            </div> */}
+            {/* <div className="form-inline">
+                <label htmlFor="Phone">
                     <strong>Phone:</strong>
                 </label>
                 <input
@@ -51,12 +51,12 @@ function Login({ FullName, UserName, Phone, Email, Password }) {
                     className="form-control"
                     id="Phone"
                     value={Phone}
-                    // onChange={handleInputChange}
+                    onChange={handleInputChange}
                     required
                 />
-            </div>
+            </div> */}
             <div className="form-inline">
-                <label htmlfor="Password">
+                <label htmlFor="Password">
                     <strong>Password:</strong>
                 </label>
                 <input
@@ -64,12 +64,12 @@ function Login({ FullName, UserName, Phone, Email, Password }) {
                     className="form-control"
                     id="Password"
                     value={Password}
-                    // onChange={handleInputChange}
+                    onChange={handleInputChange}
                     required
                 />
             </div>
             <button
-                // onClick={handleFormSubmit}
+                onClick={handleFormSubmit}
                 type="submit"
                 className="btn btn-primary"
                 >

@@ -35,12 +35,11 @@ class Home extends Component {
       handleFormSubmit = event => {
         // Preventing the default behavior of the form submit (which is to refresh the page)
         event.preventDefault();
-        if (!this.state.Name || !this.state.Phone) {
+        if (!this.state.Name) {
           alert("Fill out your first and last name please!");
         } else if (this.state.Password.length < 6) {
           alert(
-            `Choose a more secure Password ${this.state.Name} ${this.state
-              .Phone}`
+            `Choose a more secure Password ${this.state.Name}`
           );
         } else {
           alert(`Hello ${this.state.Name} ${this.state.Phone}`);
@@ -49,7 +48,9 @@ class Home extends Component {
         this.setState({
           Name: "",
           Phone: "",
-          Password: ""
+          Password: "",
+          UserName: "",
+          Email: "",
         });
       };
     
