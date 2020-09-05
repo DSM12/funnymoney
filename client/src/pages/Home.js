@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Login from "../components/Login";
+import CreateNewAcct from "../components/CreateNewAcct";
 
 class Home extends Component {
   state = {
@@ -9,7 +10,7 @@ class Home extends Component {
     Email: "",
     Password: ""
   };
-  
+
   handleInputChange = event => {
     // Getting the value and name of the input which triggered the change
     let value = event.target.value;
@@ -31,40 +32,38 @@ class Home extends Component {
 
 
 
-    
-      handleFormSubmit = event => {
-        // Preventing the default behavior of the form submit (which is to refresh the page)
-        event.preventDefault();
-        if (!this.state.Name) {
-          alert("Fill out your first and last name please!");
-        } else if (this.state.Password.length < 6) {
-          alert(
-            `Choose a more secure Password ${this.state.Name}`
-          );
-        } else {
-          alert(`Hello ${this.state.Name} ${this.state.Phone}`);
-        }
-    
-        this.setState({
-          Name: "",
-          Phone: "",
-          Password: "",
-          UserName: "",
-          Email: "",
-        });
-      };
-    
-      render() {
-        // Notice how each input has a `value`, `name`, and `onChange` prop
-        return (
-          <div>
-            <Login>
 
-            </Login>
-          </div>
-        );
-      }
+  handleFormSubmit = event => {
+    // Preventing the default behavior of the form submit (which is to refresh the page)
+    event.preventDefault();
+    if (!this.state.Name) {
+      alert("Fill out your first and last name please!");
+    } else if (this.state.Password.length < 6) {
+      alert(
+        `Choose a more secure Password ${this.state.Name}`
+      );
+    } else {
+      alert(`Hello ${this.state.Name} ${this.state.Phone}`);
     }
-    
-    export default Home;
-    
+
+    this.setState({
+      Name: "",
+      Phone: "",
+      Password: "",
+      UserName: "",
+      Email: "",
+    });
+  };
+
+  render() {
+    // Notice how each input has a `value`, `name`, and `onChange` prop
+    return (
+      <div>
+        <h1>Login</h1>
+        <Login></Login>
+      </div>
+    );
+  }
+}
+
+export default Home;

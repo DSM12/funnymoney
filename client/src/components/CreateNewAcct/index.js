@@ -68,13 +68,6 @@ function CreateNewAcct({FullName, UserName, Email,Phone, Password, handleInputCh
                     required
                 />
             </div>
-            <button
-                onClick={handleFormSubmit}
-                type="submit"
-                className="btn btn-primary"
-                >
-                Submit
-              </button>
          </form>
   );
 }
