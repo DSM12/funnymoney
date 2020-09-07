@@ -5,14 +5,14 @@ function Nav({ q, handleInputChange, handleFormSubmit }) {
     <form>
       <div className="form-group">
         <label htmlFor="Query">
-          <strong>Book</strong>
+          <strong>Funnymoney</strong>
         </label>
         <input
           className="form-control"
           id="Title"
           type="text"
           value={q}
-          placeholder="Ready Player One"
+          placeholder=""
           name="q"
           onChange={handleInputChange}
           required
