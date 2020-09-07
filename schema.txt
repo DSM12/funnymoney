@@ -1,0 +1,3 @@
+use funnymoney
+db.funnymoney.insert({FullName: "Danny Montano", UserName: "dsm", Email: "dsmontano12@gmail.com", Phone: "121-212-1212", Password: "1234"})
+db.funnymoney.insert({Date: "6/6/2020", Amount: "22.75", Description: "Groceries", Merchant: "Wal-Mart"})
