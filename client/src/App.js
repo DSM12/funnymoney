@@ -1,13 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
-import Modal from "./components/Modal";
+import FunnyMoney from "./pages/FunnyMoney";
 
 
 function App() {
   return (
     <div>
       <Home></Home>
+      <FunnyMoney></FunnyMoney>
     </div>
   );
 }
