@@ -2,16 +2,15 @@ const router = require("express").Router();
 const userController = require("../../controllers/userController");
 
 // Matches with "/api/books"
-router.route("/CreateNewAcct")
+router.
+  route("/CreateNewAcct")
   .post(userController.create);
 
-// router.route("/")
-//   .get("mongodb://localhost/funnymoney"), function(req,res){
-//     var User = mongoose.model('User', userSchema);
-
-//     User.find({'User':'UserName'}, 'UserName Password', function (err,Users){
-//       if (err) return handleError(err);
-//     })
-//   }
+router.
+  route("/")
+  .get(userController.findById)
+  .put(userController.update)
+  .delete(userController.remove);
+  //find out how to check what is entered from the form in the Login component and check that against the database
 
 module.exports = router;

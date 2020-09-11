@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Login from "../components/Login";
-import CreateNewAcct from "../components/CreateNewAcct";
+import Modal from "../components/Modal";
 
 class Home extends Component {
   state = {
@@ -8,8 +8,19 @@ class Home extends Component {
     UserName: "",
     Phone: "",
     Email: "",
-    Password: ""
+    Password: "",
+    show: false
   };
+
+  showModal = e => {
+    this.setState({
+      show: !this.state.show
+    });
+  };
+
+  // onClose = e => {
+  //   this.props.onClose && this.props.onClose(e);
+  // };
 
   handleInputChange = event => {
     // Getting the value and name of the input which triggered the change
@@ -61,6 +72,11 @@ class Home extends Component {
       <div>
         <h1>Login</h1>
         <Login></Login>
+        <Modal show={this.state.show} onClose={this.showModal} />
+        <button  onClick={e => {
+              this.showModal();
+         }}
+          > Create New Account </button>
       </div>
     );
   }
