@@ -1,7 +1,11 @@
 import React, { Component } from "react";
-import AddExpense from "../components/AddExpenses";
+// import AddExpenses from "../components/AddExpenses";
+import TodayHeader from "../components/TodayHeader";
+import TodayJumbotron from "../components/TodayJumbotron";
+import Nav from "../components/Nav";
+import TodaysTransactions from "../components/TodaysTransactions";
 
-class FunnyMoney extends Component {
+class Dashboard extends Component {
     state = {
       Date: "",
       Amount: "",
@@ -40,10 +44,14 @@ class FunnyMoney extends Component {
         return (
           <div>
           <h1>Funny Money</h1>
-          <AddExpense></AddExpense>
+          <Nav />
+          {/* <AddExpenses /> */}
+          <TodayHeader />
+          <TodayJumbotron />
+          <TodaysTransactions />
           </div>
         );
       }
     };
     
-    export default FunnyMoney;
+    export default Dashboard;

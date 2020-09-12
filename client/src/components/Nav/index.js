@@ -1,33 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-function Nav({ q, handleInputChange, handleFormSubmit }) {
+function Nav({handleInputChange}) {
   return (
-    <form>
-      <div className="form-group">
-        <label htmlFor="Query">
-          <strong>Funnymoney</strong>
-        </label>
-        <input
-          className="form-control"
-          id="Title"
-          type="text"
-          value={q}
-          placeholder=""
-          name="q"
-          onChange={handleInputChange}
-          required
-        />
-      </div>
-      <div className="pull-right">
-        <button
-          onClick={handleFormSubmit}
-          type="submit"
-          className="btn btn-lg btn-danger float-right"
-        >
-          Search
-        </button>
-      </div>
-    </form>
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active" href="/dashboard" onClick={handleInputChange}>Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/dashboard" onClick={handleInputChange}>Todays Expense</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/logout" onClick={handleInputChange}>Logout</a>
+        </li>
+      </ul>
   );
 }
 

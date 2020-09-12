@@ -1,15 +1,19 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
-import FunnyMoney from "./pages/FunnyMoney";
+import Dashboard from "./pages/Dashboard";
 
 
 function App() {
   return (
+    <Router>
     <div>
-      <Home></Home>
-      <FunnyMoney></FunnyMoney>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/dashboard" component={Dashboard} />
+
+      
     </div>
+    </Router>
   );
 }
 
