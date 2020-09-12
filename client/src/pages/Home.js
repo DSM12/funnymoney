@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Login from "../components/Login";
 import Modal from "../components/Modal";
+import Dashboard from "./Dashboard"
 
 class Home extends Component {
   state = {
@@ -71,12 +72,13 @@ class Home extends Component {
     return (
       <div>
         <h1>Login</h1>
-        <Login></Login>
+        <Login />
         <Modal show={this.state.show} onClose={this.showModal} />
         <button  onClick={e => {
               this.showModal();
          }}
           > Create New Account </button>
+          <Dashboard />
       </div>
     );
   }
