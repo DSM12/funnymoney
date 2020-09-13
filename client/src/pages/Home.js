@@ -78,7 +78,6 @@ class Home extends Component {
               this.showModal();
          }}
           > Create New Account </button>
-          <Dashboard />
       </div>
     );
   }
