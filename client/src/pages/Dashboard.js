@@ -2,8 +2,10 @@ import React, { Component } from "react";
 // import AddExpenses from "../components/AddExpenses";
 import TodayHeader from "../components/TodayHeader";
 import TodayJumbotron from "../components/TodayJumbotron";
-import Nav from "../components/Nav";
+// import Nav from "../components/Nav";
 import TodaysTransactions from "../components/TodaysTransactions";
+import ReactDOM from "react-dom";
+import SideBar from "../components/Sidebar";
 
 class Dashboard extends Component {
     state = {
@@ -44,7 +46,8 @@ class Dashboard extends Component {
         return (
           <div>
           <h1>Funny Money</h1>
-          <Nav />
+          <SideBar />
+          {/* <Nav /> */}
           {/* <AddExpenses /> */}
           <TodayHeader />
           <TodayJumbotron />
