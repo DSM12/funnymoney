@@ -1,8 +1,6 @@
 Things that need done:
     User authentication
-        Create new account
-            Getting input forms to save the data (name, phone number, email, password, and username to the database) (post route)
-            Make a profile for a generic login
+        Need to compare what is in form to what is in database to tell if an account already has been created
         
         Logging in
             Retrieving data from the database to check if an account exists
