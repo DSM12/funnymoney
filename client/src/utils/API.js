@@ -18,6 +18,7 @@ export default {
     return axios.post("/api/CreateNewAcct", userData);
   },
   saveAddEx: function(addexData) {
-    return axios.post("/api/addexpense", addexData);
+    console.log(addexData);
+    return axios.post("/api/transactions", addexData);
   }
 };

@@ -16,7 +16,9 @@ body {
   /* Prevent sidebar from showing a scrollbar on page */
   overflow: auto;
 }
-
+#sidebar{
+  max-width: 20%;
+}
 /* Individual item */
 .bm-item {
   display: inline-block;
