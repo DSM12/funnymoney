@@ -1,77 +1,67 @@
 import React, { Component } from "react";
-import AddExpenses from "../components/AddExpenses";
+import TransactionsModal from "../components/TransactionsModal";
 import TodayHeader from "../components/TodayHeader";
 import TodayJumbotron from "../components/TodayJumbotron";
-// import Nav from "../components/Nav";
 import TodaysTransactions from "../components/TodaysTransactions";
-import ReactDOM from "react-dom";
-import SideBar from "../components/Sidebar";
-import API from "../utils/API";
+// import SideBar from "../components/Sidebar";
 
 class Dashboard extends Component {
-    state = {
-      Date: "01/01/2019",
-      Amount: "11.54",
-      Description: "Duh",
-      Merchant: "Over here",
-    }
+  state = {
+    Date: "",
+    Amount: "",
+    Description: "",
+    Merchant: "",
+  };
 
-    handleExpenseSave = () => {
-      const expense = this.state;
-      console.log(JSON.stringify(expense));
-      API.saveAddEx({
-        Date: expense.Date,
-        Amount: expense.Amount,
-        Description: expense.Description,
-        Merchant: expense.Merchant    
-      }).then(() => console.log("Expense created"));
-    };
-  
-    handleFormSubmit = event => {
-      // Preventing the default behavior of the form submit (which is to refresh the page)
-      event.preventDefault();
-      // this.props.onClose && this.props.onClose(event);
-      console.log(this.state);
-      this.handleExpenseSave();
-    };
+  showModal = e => {
+    this.setState({
+      show: !this.state.show
+    });
+  };
 
-    handleInputChange = event => {
-      // Getting the value and name of the input which triggered the change
-      let value = event.target.value;
-      const Date = event.target.Date;
-      const Amount = event.target.Amount;
-      const Description = event.target.Description;
-      const Merchant = event.target.Merchant;
-    };  
-  
-    // handleFormSubmit = event => {
-    //   // Preventing the default behavior of the form submit (which is to refresh the page)
-    //   event.preventDefault();  
-    //   this.setState({
-    //     Date: "",
-    //     Amount: "",
-    //     Description: "",
-    //     Merchant: ""
-    //   });
-    //   API.saveAddEx(this.state)
-    //   .then(() => {
-    //       console.log(this.state);
-    //   })
-    // };
+  handleInputChange = event => {
+    // Getting the value and name of the input which triggered the change
+    let value = event.target.value;
+    const Date = event.target.Date;
+    const Amount = event.target.Amount;
+    const Description = event.target.Description;
+    const Merchant = event.target.Merchant;
+  }
 
-    render() {
-        return (
-          <div>
-          <h1>Funny Money</h1>
-          <SideBar />
-          {/* <Nav /> */}
-          <AddExpenses handleFormSubmit={this.handleFormSubmit} />
-          <TodayHeader />
-          <TodayJumbotron />
-          <TodaysTransactions />
-          </div>
-        );
-      }
-    };
-    
-    export default Dashboard;
+
+  handleFormSubmit = event => {
+    // Preventing the default behavior of the form submit (which is to refresh the page)
+    event.preventDefault();
+
+    console.log(this.state);
+
+
+    this.setState({
+      Date: "",
+      Amount: "",
+      Description: "",
+      Merchant: "",
+    });
+  };
+
+
+
+  render() {
+    return (
+      <div>
+        <h1>Funny Money</h1>
+        {/* <SideBar /> */}
+        <TodayHeader />
+        <TodayJumbotron />
+        <TodaysTransactions />
+        <TransactionsModal show={this.state.show} onClose={this.showModal} />
+        <button onClick={e => {
+          this.showModal();
+        }}
+        > Add Transaction! </button>
+      </div>
+    );
+  }
+};
+
+export default Dashboard;

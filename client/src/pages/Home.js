@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Login from "../components/Login";
 import Modal from "../components/Modal";
-import Dashboard from "./Dashboard"
+
 
 class Home extends Component {
   state = {
@@ -19,9 +19,7 @@ class Home extends Component {
     });
   };
 
-  // onClose = e => {
-  //   this.props.onClose && this.props.onClose(e);
-  // };
+
 
   handleInputChange = event => {
     // Getting the value and name of the input which triggered the change

@@ -17,8 +17,8 @@ export default {
   saveUser: function(userData) {
     return axios.post("/api/CreateNewAcct", userData);
   },
-  saveAddEx: function(addexData) {
-    console.log(addexData);
-    return axios.post("/api/transactions", addexData);
+  saveTransactions: function(transactionsData) {
+    console.log(transactionsData);
+    return axios.post("/api/transactions", transactionsData);
   }
 };
