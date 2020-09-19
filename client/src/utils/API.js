@@ -17,8 +17,11 @@ export default {
   saveUser: function(userData) {
     return axios.post("/api/CreateNewAcct", userData);
   },
-  saveTransactions: function(transactionsData) {
-    console.log(transactionsData);
-    return axios.post("/api/transactions", transactionsData);
+  saveTransactions: function(TransactionsData) {
+    console.log(TransactionsData);
+    return axios.post("/api/transactions", TransactionsData);
   }
 };
+
+
+//FIGURE OUT WHERE AND WHY WE ARENT CONNECTING TO MONGO EXACTLY

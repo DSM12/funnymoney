@@ -26,14 +26,6 @@ class Dashboard extends Component {
     const Amount = event.target.Amount;
     const Description = event.target.Description;
     const Merchant = event.target.Merchant;
-  }
-
-
-  handleFormSubmit = event => {
-    // Preventing the default behavior of the form submit (which is to refresh the page)
-    event.preventDefault();
-
-    console.log(this.state);
 
 
     this.setState({
@@ -42,6 +34,16 @@ class Dashboard extends Component {
       Description: "",
       Merchant: "",
     });
+  }
+
+  handleFormSubmit = event => {
+    // Preventing the default behavior of the form submit (which is to refresh the page)
+    event.preventDefault();
+
+    console.log(this.state);
+
+
+
   };
 
 
