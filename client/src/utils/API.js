@@ -1,15 +1,15 @@
 import axios from "axios";
 
 export default {
-  // Gets books from the Google API
   getTransactions: function() {
     return axios.get("/api/transactions");
   },
-  // Deletes the saved book with the given id
+  getUser: function(userData){
+    return axios.get("/api/user", userData);
+  },
   deleteTransaction: function(id) {
     return axios.delete("/api/transactions/" + id);
   },
-  // Saves an book to the database
   saveUser: function(userData) {
     return axios.post("/api/CreateNewAcct", userData);
   },
@@ -18,6 +18,3 @@ export default {
     return axios.post("/api/transactions", TransactionsData);
   }
 };
-
-
-//FIGURE OUT WHERE AND WHY WE ARENT CONNECTING TO MONGO EXACTLY
