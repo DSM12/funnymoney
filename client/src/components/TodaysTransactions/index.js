@@ -21,7 +21,7 @@ class TodaysTransactions extends Component {
             var tempArray = [];
             const today = moment().format('YYYY-MM-DD');
             for(var i = 0; i < results.data.length; i++){
-                if(results.data[i].Date == today){
+                if(results.data[i].Date === today){
                     tempArray.push(results.data[i]);
                 }
             }

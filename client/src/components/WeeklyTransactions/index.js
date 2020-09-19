@@ -24,11 +24,9 @@ class WeeklyTransactions extends Component {
             const to_date = moment().day(6).format('YYYY-MM-DD').split(12,1)[0];
 
             
-
-
-            console.log(from_date, to_date);
             for(var i = 0; i < results.data.length; i++){
-                if(results.data[i].Date == week){
+                if(moment(results.data[i].Date).isBetween(from_date, to_date, 'day', []))
+                {
                     tempArray.push(results.data[i]);
                 }
             }
@@ -39,7 +37,7 @@ class WeeklyTransactions extends Component {
 
     render() {
         return <div>
-            <h2>Todays Transactions</h2>
+            <h2>Weekly Transactions</h2>
             <table>
                 <tbody>
                     <tr>

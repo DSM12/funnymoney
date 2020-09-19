@@ -1,18 +1,86 @@
-import React from "react";
+import React, { Component } from "react";
+import API from "../../utils/API";
 
-function Login({UserName, Password, handleInputChange, handleFormSubmit }) {
+class Login extends Component{
+    state = {
+        Email: "",
+        Password: ""
+    };
+
+    componentDidMount() {
+        this.getUser()
+    }
+
+    handleInputChange = event => {
+        // Getting the value and name of the input which triggered the change
+        let value = event.target.value;
+        const Email = event.target.Email;
+        const Password = event.target.Password;
+        if (Password === "password") {
+          value = value.substring(0, 15);
+        }
+        // Updating the input's state
+        this.setState({
+          [Email]: value
+    
+        });
+      };
+    
+    getUserLogin = () => {
+        API.getUser()
+        .then(result => 
+            this.setState({
+                Email: result.data.Email,
+                Password: result.data.Password
+            }) 
+        )
+        .catch(err => console.log(err));
+    }
+    
+    
+      handleFormSubmit = event => {
+        // Preventing the default behavior of the form submit (which is to refresh the page)
+        event.preventDefault();
+        if (!this.state.Name) {
+          alert("Fill out your first and last name please!");
+        } else if (this.state.Password.length < 6) {
+          alert(
+            `Choose a more secure Password ${this.state.Name}`
+          );
+        } else {
+          alert(`Hello ${this.state.Name} ${this.state.Phone}`);
+        }
+    
+        this.setState({
+          Name: "",
+          Phone: "",
+          Password: "",
+          UserName: "",
+          Email: "",
+        });
+      };
+
+
+
+
+
+
+
+
+
+    render(){
     return (
         <form>
             <div className="form-inline">
-                <label htmlFor="Username">
-                    <strong>Username:</strong>
+                <label htmlFor="Email">
+                    <strong>Email:</strong>
                 </label>
                 <input
-                    type="username"
+                    type="email"
                     className="form-control"
-                    id="Username"
-                    value={UserName}
-                    onChange={handleInputChange}
+                    id="Email"
+                    value={this.Email}
+                    onChange={this.handleInputChange}
                     required
                 />
             </div>
@@ -24,14 +92,14 @@ function Login({UserName, Password, handleInputChange, handleFormSubmit }) {
                     type="Password"
                     className="form-control"
                     id="Password"
-                    value={Password}
-                    onChange={handleInputChange}
+                    value={this.Password}
+                    onChange={this.handleInputChange}
                     required
                 />
             </div>
             <div className="form-inline">
             <button
-                onClick={handleFormSubmit}
+                onClick={this.handleFormSubmit}
                 type="submit"
                 className="btn btn-primary"
                 >
@@ -39,7 +107,10 @@ function Login({UserName, Password, handleInputChange, handleFormSubmit }) {
               </button>
               </div>
          </form>
+         
   );
 }
+}
+
 
 export default Login;
