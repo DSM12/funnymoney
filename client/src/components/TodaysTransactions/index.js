@@ -18,13 +18,19 @@ class TodaysTransactions extends Component {
     getTransactions() {
         API.getTransactions({
         }).then(results => {
-            this.setState({ dbTransactions: results.data })
-            console.log(results);
+            var tempArray = [];
+            const today = moment().format('YYYY-MM-DD');
+            for(var i = 0; i < results.data.length; i++){
+                if(results.data[i].Date == today){
+                    tempArray.push(results.data[i]);
+                }
+            }
+            this.setState({ dbTransactions: tempArray});
+            console.log(tempArray);
         });
     };
 
     render() {
-        // const state = this.state;
         return <div>
             <h2>Todays Transactions</h2>
             <table>
