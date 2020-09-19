@@ -1,4 +1,29 @@
 Things that need done:
+
+*****************************SATURDAY 9/19*******************************
+
+1st things first:
+- Transactions storage. (Data and form not getting to state) (POST)
+- Retrieve transctions from the data base and store in TodaysTransactions Component (GET)
+- Figure out how to get current date, and use that in order to get TodaysTransactions.
+
+
+- Finish creating and updating components (daily, weekly, monthly, annually, savings projections)
+- Figure out how we're determining each user's fixed salary. 
+
+
+
+-Are we building an API? 
+-How are we making calculations? Mongo should handle that after we code it to. 
+-Are we hard coding the equations or can a relatable API do the job?
+
+
+
+-React-bootstrap/CSS
+
+***************************************************************************
+
+
     User authentication
         Need to compare what is in form to what is in database to tell if an account already has been created
         
@@ -17,6 +42,7 @@ Things that need done:
             We need to store: Date, Amount, Merchant, and Category
         Retrieve transactions from the database
             We need to retrieve: Date, Amount, Merchant, and Category
+            *FIGURE OUT WHERE AND WHY WE ARENT CONNECTING TO MONGO EXACTLY*
 
     Todays Expenses
         Display total expenses for today (numerical amount)

@@ -102,7 +102,7 @@ class Modal extends Component {
             </form>
 
             <button
-                onClick={this.handleFormSubmit}
+                onClick={this.handleFormSubmit, this.handleTransactionsSave}
             >
                 Add Transaction!
         </button>
