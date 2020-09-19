@@ -3,8 +3,7 @@ Things that need done:
 *****************************SATURDAY 9/19*******************************
 
 1st things first:
-- Transactions storage. (Data and form not getting to state) (POST)
-- Retrieve transctions from the data base and store in TodaysTransactions Component (GET)
+- Format date into Unix then send to database
 - Figure out how to get current date, and use that in order to get TodaysTransactions.
 
 

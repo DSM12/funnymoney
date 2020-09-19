@@ -3,13 +3,13 @@ const transactionsController = require("../../controllers/transactionsController
 
 // Matches with "/api/posts"
 router
-  .route("/api/transactions")
+  .route("/")
   .get(transactionsController.findAll)
   .post(transactionsController.create);
 
 // Matches with "/api/posts/:id"
 router
-  .route("/api/transactions/:id")
+  .route("/:id")
   .get(transactionsController.findById)
   .put(transactionsController.update)
   .delete(transactionsController.remove);
