@@ -3,7 +3,7 @@ import TransactionsModal from "../components/TransactionsModal";
 import TodayHeader from "../components/TodayHeader";
 import TodayJumbotron from "../components/TodayJumbotron";
 import TodaysTransactions from "../components/TodaysTransactions";
-// import SideBar from "../components/Sidebar";
+import SideBar from "../components/Sidebar";
 
 class Dashboard extends Component {
   state = {
@@ -52,15 +52,15 @@ class Dashboard extends Component {
     return (
       <div>
         <h1>Funny Money</h1>
-        {/* <SideBar /> */}
+        <SideBar />
         <TodayHeader />
         <TodayJumbotron />
-        <TodaysTransactions />
         <TransactionsModal show={this.state.show} onClose={this.showModal} />
         <button onClick={e => {
           this.showModal();
         }}
         > Add Transaction! </button>
+        <TodaysTransactions />
       </div>
     );
   }

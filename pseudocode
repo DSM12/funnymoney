@@ -2,12 +2,7 @@ Things that need done:
 
 *****************************SATURDAY 9/19*******************************
 
-1st things first:
-- Format date into Unix then send to database
-- Figure out how to get current date, and use that in order to get TodaysTransactions.
-
-
-- Finish creating and updating components (daily, weekly, monthly, annually, savings projections)
+- Finish updating components (daily, weekly, monthly, annually, savings projections)
 - Figure out how we're determining each user's fixed salary. 
 
 
