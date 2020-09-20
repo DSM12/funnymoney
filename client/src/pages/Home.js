@@ -24,14 +24,14 @@ class Home extends Component {
   handleInputChange = event => {
     // Getting the value and name of the input which triggered the change
     let value = event.target.value;
-    const UserName = event.target.UserName;
+    const Email = event.target.UserName;
     const Password = event.target.Password;
     if (Password === "password") {
       value = value.substring(0, 15);
     }
     // Updating the input's state
     this.setState({
-      [UserName]: value
+      [Email]: value
 
     });
   };

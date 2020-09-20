@@ -1,6 +1,6 @@
 import React from "react";
 
-function yearlyJumbotron({ }) {
+function AnnualJumbotron({ }) {
   return (
     <div>
       <div className="jumbotron jumbotron-fluid">
@@ -10,4 +10,4 @@ function yearlyJumbotron({ }) {
   );
 }
 
-export default yearlyJumbotron;
+export default AnnualJumbotron;
