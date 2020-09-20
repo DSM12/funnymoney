@@ -5,6 +5,7 @@ import TodayJumbotron from "../components/TodayJumbotron";
 import TodaysTransactions from "../components/TodaysTransactions";
 import SideBar from "../components/Sidebar";
 import WeeklyTransactions from "../components/WeeklyTransactions";
+import MonthlyTransactions from "../components/MonthlyTransactions";
 
 class Dashboard extends Component {
   state = {
@@ -58,6 +59,7 @@ class Dashboard extends Component {
         <TodayJumbotron />
         <TransactionsModal show={this.state.show} onClose={this.showModal} />
         <WeeklyTransactions />
+        <MonthlyTransactions />
         <button onClick={e => {
           this.showModal();
         }}

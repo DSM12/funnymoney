@@ -1,6 +1,6 @@
 import React from "react";
 
-function yearlyHeader({}) {
+function AnnualHeader({}) {
     return (
         <div>
           <h1>Annual Expenses</h1>
@@ -8,4 +8,4 @@ function yearlyHeader({}) {
   );
 }
 
-export default yearlyHeader;
+export default annualHeader;

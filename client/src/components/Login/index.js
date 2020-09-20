@@ -8,7 +8,7 @@ class Login extends Component{
     };
 
     componentDidMount() {
-        this.getUser()
+        this.getUser();
     }
 
     handleInputChange = event => {
@@ -20,10 +20,10 @@ class Login extends Component{
           value = value.substring(0, 15);
         }
         // Updating the input's state
-        this.setState({
-          [Email]: value
+        // this.setState({
+        //   [Email]: value
     
-        });
+        // });
       };
     
     getUserLogin = () => {
@@ -45,19 +45,12 @@ class Login extends Component{
           alert("Fill out your first and last name please!");
         } else if (this.state.Password.length < 6) {
           alert(
-            `Choose a more secure Password ${this.state.Name}`
+            `Choose a more secure Password ${this.state.Password}`
           );
         } else {
           alert(`Hello ${this.state.Name} ${this.state.Phone}`);
         }
     
-        this.setState({
-          Name: "",
-          Phone: "",
-          Password: "",
-          UserName: "",
-          Email: "",
-        });
       };
 
 
@@ -79,7 +72,7 @@ class Login extends Component{
                     type="email"
                     className="form-control"
                     id="Email"
-                    value={this.Email}
+                    value={this.state.Email}
                     onChange={this.handleInputChange}
                     required
                 />
@@ -92,7 +85,7 @@ class Login extends Component{
                     type="Password"
                     className="form-control"
                     id="Password"
-                    value={this.Password}
+                    value={this.state.Password}
                     onChange={this.handleInputChange}
                     required
                 />
