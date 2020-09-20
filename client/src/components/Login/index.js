@@ -8,7 +8,7 @@ class Login extends Component{
     };
 
     componentDidMount() {
-        this.getUser();
+        this.getUserLogin();
     }
 
     handleInputChange = event => {
