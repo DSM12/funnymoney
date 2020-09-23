@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&family=Press+Start+2P&family=Roboto:wght@100&display=swap');
+
+h2{
+  font-size: 30px;
+}
+#Transactions {
+    display: flex;
+    overflow-x:auto;
+    position: left;
+    font-family: 'PT Mono', monospace;
+    text-align-last: center;
+    border-collapse: collapse;
+    width: 60%;
+    height: 30%;
+  }
+  
+  #Transactions td, #Transactions th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #Transactions tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #Transactions tr:nth-child(odd){background-color: silver;}
+
+  #Transactions tr:hover {background-color: #ddd;}
+  
+  #Transactions th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #30b834;
+    color: white;
+  }

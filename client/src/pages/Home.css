@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Mono&display=swap");
+
+body{
+    background-color: #6F8CA6;
+    }
+
+div {
+    position: center;
+    }
+
+#LoginText{
+    font-family: 'PT Mono', monospace;
+    font-size: 30px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+          }
+
+#divLoginForm{
+    font-family: 'PT Mono', monospace;
+    font-size: 15px;
+    position: center;
+    left: 50%;
+    top: 50%;
+}
+
+#divModal{
+    position: relative;
+    left: 50%;
+    top: 50%;
+}

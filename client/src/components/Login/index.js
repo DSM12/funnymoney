@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
+import "../Login/Login.css";
 
 class Login extends Component{
     state = {
@@ -63,7 +64,7 @@ class Login extends Component{
 
     render(){
     return (
-        <form>
+        <form id="LoginForm">
             <div className="form-inline">
                 <label htmlFor="Email">
                     <strong>Email:</strong>
@@ -77,6 +78,7 @@ class Login extends Component{
                     required
                 />
             </div>
+            <br></br>
             <div className="form-inline">
                 <label htmlFor="Password">
                     <strong>Password:</strong>
@@ -90,8 +92,9 @@ class Login extends Component{
                     required
                 />
             </div>
+            <br></br>
             <div className="form-inline">
-            <button
+            <button id="LoginButton"
                 onClick={this.handleFormSubmit}
                 type="submit"
                 className="btn btn-primary"

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Login from "../components/Login";
 import Modal from "../components/Modal";
-
+import "../pages/Home.css";
 
 class Home extends Component {
   state = {
@@ -61,14 +61,25 @@ class Home extends Component {
   };
 
   render() {
+//     <head>
+// <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Font+Name"></link>
+// <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet"></link>
+// </head>
     // Notice how each input has a `value`, `name`, and `onChange` prop
     return (
+      
       <div>
-        <h1>Login</h1>
-        <Login />
-        <Modal show={this.state.show} onClose={this.showModal} />
-        <button  onClick={e => {
-              this.showModal();
+        <div id="LoginText">
+          <h1>Login</h1>
+        </div>
+        <div id="divLoginForm">
+          <Login />
+        </div>
+        <div id="divModal">
+          <Modal show={this.state.show} onClose={this.showModal} />
+        </div>
+          <button id="CreateAccountButton"  onClick={e => {
+            this.showModal();
          }}
           > Create New Account </button>
       </div>

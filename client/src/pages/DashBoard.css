@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&family=Press+Start+2P&family=Roboto:wght@100&display=swap');
+
+body{
+   background-color: #6F8CA6;
+}
+
+div{
+   position: center;
+}
+
+#FunnyMoney{
+   font-family: 'Press Start 2P', cursive;
+   position: relative;
+   left: 50%;
+   top: 50%;
+   font-size: 80px;
+}
+
+#ModalButton{
+   font-family: 'PT Mono', monospace;
+   position: relative;
+   left: 50%;
+   top: 50%;
+}
+
+#TransactionsModal{
+   font-family: 'Roboto', sans-serif;
+   position: relative;
+   left: 50%;
+   top: 50%;
+}
+
+#TodaysTransactions{
+   font-family: 'Roboto', sans-serif;
+   position: relative;
+   left: 50%;
+   top: 50%;
+}
+
+#TransactionButton{
+   font-family: 'Roboto', sans-serif;
+   font-weight: 600;
+   position: center;
+   left: 50%;
+   top: 50%;
+}

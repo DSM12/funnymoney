@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
+import '../TodaysTransactions/TodaysTransactions.css';
 var moment = require('moment');
 
 class TodaysTransactions extends Component {
@@ -33,7 +34,7 @@ class TodaysTransactions extends Component {
     render() {
         return <div>
             <h2>Todays Transactions</h2>
-            <table>
+            <table id="Transactions">
                 <tbody>
                     <tr>
                         <th>Date</th>

@@ -1,11 +1,8 @@
 import React, { Component } from "react";
 import TransactionsModal from "../components/TransactionsModal";
-import TodayHeader from "../components/TodayHeader";
-import TodayJumbotron from "../components/TodayJumbotron";
 import TodaysTransactions from "../components/TodaysTransactions";
 import SideBar from "../components/Sidebar";
-import WeeklyTransactions from "../components/WeeklyTransactions";
-import MonthlyTransactions from "../components/MonthlyTransactions";
+import '../pages/DashBoard.css';
 
 class Dashboard extends Component {
   state = {
@@ -53,18 +50,22 @@ class Dashboard extends Component {
   render() {
     return (
       <div>
-        <h1>Funny Money</h1>
+        <br></br>
+        <header id="FunnyMoney">Funny Money</header>
         <SideBar />
-        <TodayHeader />
-        <TodayJumbotron />
+        <div id="TransactionsModal">
         <TransactionsModal show={this.state.show} onClose={this.showModal} />
-        <WeeklyTransactions />
-        <MonthlyTransactions />
-        <button onClick={e => {
+        </div>
+        <div id="TodaysTransactions">
+        <TodaysTransactions />
+        </div>
+        <div id="ModalButton">
+          <br></br>
+        <button id="TransactionButton" onClick={e => {
           this.showModal();
         }}
         > Add Transaction! </button>
-        <TodaysTransactions />
+        </div>
       </div>
     );
   }

@@ -1,0 +1,29 @@
+div {
+    position: center;
+    }
+
+#LoginForm{
+    position: relative;
+   left: 50%;
+   top: 50%;
+}
+
+#LoginButton{
+    position: center;
+    font-size: 15px;
+   left: 50%;
+   top: 50%;
+}
+
+#CreateAccountButton{
+    position: relative;
+    font-size: 15px;
+   left: 50%;
+   top: 50%;
+}
+
+#LoginText{
+    position: relative;
+   left: 50%;
+   top: 50%;
+}
